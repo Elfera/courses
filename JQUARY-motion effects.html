@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type = "text/javascript" src="jquery-3.6.3.min.js"></script>
+
+<script type="text/javascript">
+  
+  $(document).ready(function(e){
+       $('#in').click(function(){
+          $('#JQ').slideDown(1000,function(){
+            alert('done');
+
+          })
+          
+      });
+       $('#out').click(function(){
+          $('#JQ').slideUp(2000);
+          
+      });
+      $('#anm').click(function(){
+          $('#JQ').animate({left:'300px',width:'120px',top:'200px'},2000);
+          
+      });
+      $('#stop').click(function(){
+          $('#JQ').stop();
+      })
+ });
+	</script>
+</head>
+<body>
+  <button id="in">in</button>
+  <button id="out">out</button>
+  <button id="anm">move</button>
+  <button id="stop">stop</button>
+<div  id="JQ" style="width:250px; height:250px; background-color: aqua; position: absolute;">MY DIV</div>	
+</body>
+</html>
